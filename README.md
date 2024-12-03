@@ -88,4 +88,4 @@ Scalability: Consider using a cloud platform to scale the application as needed.
 User Experience: Design a user-friendly interface and provide clear instructions.
 
 ### Contact
-For any questions or issues, please contact us at [kunal34255@gmail.com].
+For any questions or issues, please contact us at [Linkedin](https://www.linkedin.com/in/kunal003/).
