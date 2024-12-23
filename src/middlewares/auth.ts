@@ -4,8 +4,8 @@ import ErrorHandler from "../customResponses/ErrorHandler";
 import jwt, { JwtPayload } from 'jsonwebtoken';
 import userModel from "../models/user.model";
 import { updateAccessToken } from "../controllers/auth.controller";
-
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 // authenticated user
 export const isAuthenticated = CatchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
