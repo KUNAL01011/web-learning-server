@@ -100,7 +100,7 @@ export const activateUser = CatchAsyncError(async (req: Request, res: Response, 
         const { userId } = req.params;
 
 
-        const user = await userModel.findById({userId});
+        const user = await userModel.findById(userId);
 
         if(!user){
             return next(new ErrorHandler("User is not exist", 400))
