@@ -97,7 +97,7 @@ interface IActivationRequest {
 export const activateUser = CatchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { activation_code } = req.body as IActivationRequest;
-        const { userId } = req.params;
+        const { userId } = req.body;
 
 
         const user = await userModel.findById(userId);
