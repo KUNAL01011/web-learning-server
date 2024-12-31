@@ -12,6 +12,7 @@ yarn.lock
 .next/
 out/
 build/
+dist/
 
 # Logs
 logs
