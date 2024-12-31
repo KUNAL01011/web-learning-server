@@ -4,6 +4,8 @@ import ErrorHandler from "../customResponses/ErrorHandler";
 import userModel from "../models/user.model";
 import { getAllUsersService, getUserById, updateUserRoleService } from "../services/user.service";
 import cloudinary from 'cloudinary';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // get user info
 export const getUserInfo = CatchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
