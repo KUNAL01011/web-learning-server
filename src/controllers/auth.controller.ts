@@ -161,8 +161,16 @@ export const loginUser = CatchAsyncError(async (req: Request, res: Response, nex
 // logout user
 export const logoutUser = CatchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
     try {
-        res.clearCookie('access_token',);
-        res.clearCookie('refresh_token');
+        res.clearCookie('access_token',{
+            httpOnly: true,
+            secure: true, // Only send over HTTPS
+            sameSite: "none", // Enable cross-origin cookies
+        });
+        res.clearCookie('refresh_token',{
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+        });
         // redis.del(userId);
         res.status(200).json({
             success: true,
